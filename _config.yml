@@ -6,7 +6,7 @@
 name: Bill Zhang
 
 # Short bio or description (displayed in the header)
-description: Programmer studying at the University of Waterloo. Looking for internship opportunities for Fall 2020 (Sept-Dec).
+description: Curious programmer studying at UW. Looking for internship opportunities for Fall 2020.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lionel-animals-to-follow-on-instagram-1568319926.jpg?crop=0.922xw:0.738xh;0.0555xw,0.142xh&resize=640:*
@@ -18,14 +18,14 @@ avatar: https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lionel-anim
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: bill.zhang@edu.uwaterloo.ca
   facebook:
   flickr:
   github: itsbillzhang
   instagram:
-  linkedin:
+  linkedin: https://www.linkedin.com/in/itsbillzhang/
   pinterest:
-  rss: 1 # just type anything here for a working RSS icon
+  rss: # just type anything here for a working RSS icon
   twitter:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
@@ -36,7 +36,7 @@ footer-links:
 disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: UA-162936598-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
