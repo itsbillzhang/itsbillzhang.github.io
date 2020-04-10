@@ -4,13 +4,12 @@ title: About
 permalink: /about/
 published: true
 ---
-Hello world prose!
-Some information about you!
+
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Hi, I'm Bill. I'm currently in 2B Math at Waterloo. Here on my page are writeups to projects I've worked on. All this is still a work in progress!
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[bill.zhang@uwaterloo.ca](mailto:bill.zhang@uwaterloo.ca)
