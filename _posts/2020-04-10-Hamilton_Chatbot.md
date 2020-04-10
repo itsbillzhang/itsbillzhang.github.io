@@ -16,7 +16,7 @@ The Turing Test was developed by Alan Turning in 1950. At its essence, it connec
 <img class="centered" src="{{site.url}}/images/TuringTest.png" />
 </p>
 
-The Lobner Prize is an annual competition awarded to the most human-like program, determined through a series of Turing Tests. For the past 5 years, the prize has been given to Mitsuku, now deemed by many as the world’s best conversational chatbots. Talking to her and discovering her knowledge of specifics was very impressive. [Mitsuku](https://www.pandorabots.com/mitsuku/) was keen to tell me how I could use bricks to build houses, and that no, I should not be eating bricks. I was intrigued by how this all worked, and after talking to Mitsuku some more, I was galvanized to building my chatbot.
+The Lobner Prize is an annual competition awarded to the most human-like program, determined through a series of Turing Tests. For the past 5 years, the prize has been given to [Mitsuku](https://www.pandorabots.com/mitsuku/), now deemed by many as the world’s best conversational chatbots. Talking to her and discovering her knowledge of specifics was very impressive. Mitsuku was keen to tell me how I could use bricks to build houses, and that no, I should not be eating bricks. I was intrigued by how this all worked, and after talking to Mitsuku some more, I was galvanized to building my chatbot.
 
 ## Research and Planning
 There are three main models to making a chatbot, based on how the chatbot retrieves the information and where it gets the information from. Retrieval based ones have a corpus of dialogue and use machine learning models to finetune responses and interpretation over time while generative chatbots can formulate original responses using neural networks. You may have heard of Microsoft’s Twitterbot, Tay. In 2016, full of comments from trolls, this generative chatbot was tweeting pro-nazi statements and hate speech within 16 hours of its release. I, however, wanted my chatbot to be more achievable. My chatbot would be rule-based, meaning all its dialogue would be predefined and there would be no fancy learning done. However, I wanted there to be a conversation, free-flowing and akin to what you might have with a human.
@@ -24,7 +24,7 @@ There are three main models to making a chatbot, based on how the chatbot retrie
 
 ![microsoft tay.jpg]({{site.baseurl}}/images/microsoft tay.jpg)
 
-On came the exploration of my chatbot’s purpose. The chatbot needed to be specific enough so that it could be useful, and on a domain that I could have fun with exploring. Hence, now the proud CEO of Abi’s Bubble Tea House, I needed to make a chatbot that could help customers place bubble tea orders. Surely you’ve seen how long the lines are during peak hours at Coco (during non-Covid19 hours, of course). Excited about what would take place, I began my project.
+On came the exploration of my chatbot’s purpose. The chatbot needed to be specific enough so that it could be useful, and on a domain that I could have fun with exploring. Hence, as the proud CEO of Abi’s Bubble Tea House, I needed to make a chatbot that could help customers place bubble tea orders. Surely you’ve seen how long the lines are during peak hours at Coco (during non-Covid19 hours, of course). Excited about what would take place, I began my project.
 
 ```
 drinks_menu = {
@@ -54,7 +54,7 @@ I thought of phrases Hamilton should be able to take, plotting down some points 
 <img class="centered" src="{{site.url}}/images/Text cleaning.PNG" />
 </p>
 
-When the user talks to Hamilton, countless words are not needed. For example, in the context of ordering drinks, just the word “menu” in a sentence could represent “Can I see the menu?” Hence, I needed to clean up each of the user’s responses, autocorrect the words, and also pick out the essential words when needed. To do this, several steps were undertaken:
+When the user talks to Hamilton, many words can be filtered out. For example, in the context of ordering drinks, just the word “menu” in a sentence could represent “Can I see the menu?” Hence, I needed to clean up each of the user’s responses, autocorrect the words, and also pick out the essential words when needed. To do this, several steps were undertaken:
 
 ### Tokenization
 When a sentence is tokenized, the text is separated into individual pieces called tokens. The piece can be of paragraphs, sentences, or in my case, individual words. This was done using the Natural Language Toolkit (NLTK) library in python. Furthermore, to ensure uniformity, each word was converted to lower case.
@@ -78,7 +78,7 @@ Then, all the words the user replied with would be compared to each of the keywo
 ### Stopword Removal
 Not all the words the user responds with are critical to their intent. For example, “I would like to order a large bubble tea with less ice” could be stripped down to “large bubble tea less ice”. 
 
-Stopword Removal was a supplementary cleaning function (as opposed to autocorrect and tokenization, which was done to all user responses except for user feedback) as not all situations required such an explicit level of cleaning. There are moments where context is necessary, such as when the user wants to order the special vs hear about the special. 
+Stopword Removal was a supplementary cleaning function (as opposed to autocorrect and tokenization, which was done to all user responses except during user feedback) as not all situations required such an explicit level of cleaning. There are moments where context is necessary, such as when the user wants to order the special vs hear about the special. 
 
 With the inputs all cleaned up, it’s time to tackle user intentions.
 
@@ -101,23 +101,23 @@ Regex is extremely useful in understanding user intent. We can have a dictionary
 <img class="centered" src="{{site.url}}/images/user_intentions.PNG" />
 </p>
         
-When a regex pattern is found, a function corresponding to that intention is called. If a regex pattern is not found, the user is asked to rephrase their request. If this occurs 3 times, Hamilton asks the user to instead call the store.
+When a regex pattern is found, a function corresponding to that intention is called. If a regex pattern is not found, the user is asked to rephrase their request. If this occurs 3 times, Hamilton advises the user to call the store.
 
 ## Understand Drink Orders
 
-One thing that Hamilton needed to do was to distinguish wish descriptors matched which drink, as a customer might order several drinks in the same string. At first, I thought of using “and” as a way to separate drinks. However, that’s not the only use ‘and’ could have. “I want a milk tea and a sunshine yogurt” is different than “I want a milk tea with red beans and tapioca”. Therefore, to use “and” as a separator of multiple drinks, it would need to recognize that the word before and after “and” were not toppings. This was simple, as I could just identify if both of those keywords were in toppings_menu.keys(). This allowed Hamilton to identify “I want a milk tea and a large stormy pouf” as (“milk tea”), (“large” “stormy pouf”).
+One thing that Hamilton needed to do was to distinguish wish descriptors matched which drink, as a customer might order several drinks in the same string. At first, I thought of using 'and' as a way to separate drinks. However, that’s not the only use ‘and’ could have. 'I want a milk tea and a sunshine yogurt' is different than 'I want a milk tea with red beans and tapioca.' Therefore, to use 'and' as a separator of multiple drinks, it would need to recognize that the word before and after “and” were not toppings. This was simple, as I could just identify if both of those keywords were in toppings_menu.keys(). This allowed Hamilton to identify “I want a milk tea and a large stormy pouf” as (“milk tea”), (“large” “stormy pouf”).
 
-However, “and” isn’t the only separator humans use. If a customer mentioned the name of a new drink, this was a clear indicator that they started talking about another drink order. This allowed for the identification of “I wish to get unicorn confetti, strawberry pineapple, finally a sunshine yogurt with red beans” as 3 drinks.
+However, 'and' isn’t the only separator humans use. If a customer mentioned the name of a new drink, this was a clear indicator that they started talking about another drink order. This allowed for the identification of 'I wish to get unicorn confetti, strawberry pineapple, finally a sunshine yogurt with red beans' as 3 drinks.
 
 “Strawberry pineapple explosion” is a mouthful to say. I wouldn’t be surprised if people referred to it just as the “explosion”, and Hamilton needed a way to realized that’s what customers meant. Therefore, when the customer names a drink, the word the customer uses loops through all individual tokens in the full drink names. If a word matches a token, then Hamilton recognizes the drink by that full name. If the next word used also refers to the same drink, the word is skipped. This is to prevent a drink like “original milk tea” being detected as 3 separate drinks. This was also done for toppings.
 
-Finally, when people order drinks, they wouldn’t be expected to give any more information than the name and the size. Therefore, after a drink response, Hamilton saves the drinks given and initializes any of the 5 descriptor values (I would expect this to be ice level, sugar level, and toppings) that do not have a value with None. The drinks are placed in a list, order_items, where a method goes through each Drink and asks the user about a particular value.
+Finally, when people order drinks, they wouldn’t be expected to give any more information than the name and the size in their inital statement. Therefore, after a drink response, Hamilton saves the drinks given and initializes any of the 5 descriptor values (I would expect this to be ice level, sugar level, and toppings) that do not have a value with None. The drinks are placed in a list, order_items, where a method goes through each Drink and asks the user about a particular value.
 
 <p class="centered-text">
 <img class="centered" src="{{site.url}}/images/Text extraction.PNG" />
 </p>
 
-I was also able to implement a very superficial version of context understanding by saving the last drink that was referenced. For example, if Hamilton mentions the special, special is saved to last_reference, so when the regex picks up the user replied with a phrase containing both “want” “that”, the special is added to the order_items list ready to be completed.
+I was also able to implement a very superficial version of context understanding by saving the last drink that was referenced. For example, if Hamilton mentions the special, special is saved to last_reference, so when the regex picks up the user replied with a phrase containing both 'want' 'that', the special is added to the order_items list ready to be completed.
 
 ## Calculating Delivery Time
 
@@ -128,16 +128,16 @@ Originally, I wished to use Google Map’s API for this. However, this was not f
 Sentiment analysis refers to deciphering the emotions associated with a sentence. Normally, this would be done with a Naive Bayes (NB) model in a supervised learning setting. The NB model would take in corpora specific to the text one wished to analyze, with sentiment values preassociated to it. The model would then predict the overall sentiment of novel sentences. However, I did not have this luxury, so I used the VaderSentiment library, with an API for automatic sentiment analysis scores. This was a more authentic implementation to interpret user intention compared to asking the user to input (y or n) or looping through a premade list of affirmatives. This also allowed me to take all parts of the sentence into sentiment consideration.
 
 
-A look into vaderSentiment. The individual scores represent the proportions of tokens that fall into each category.
+A look at vaderSentiment. The individual scores represent the proportions of tokens that fall into each category:
 
 <p class="centered-text">
 <img class="centered" src="{{site.url}}/images/vadersentiment examples.PNG" />
 </p>
 
-At the end of the order, Hamilton asks the users for feedback, with the course of the conversation dictated by sentiment:
+Sentiment analysis is also used at the end of the order where Hamilton asks the user for feedback. Hamilton adapts his responses to the user's sentiments.
 
 ## Conclusion
-Language processing and the techniques used for chatbot creation were things I had only a very basic understanding of before doing this project; however, the creation of Hamilton helped me begin to get familiar with these concepts. This was also the first project I did in Python, so using OOP concepts and learning syntax was very beneficial. 
+Language processing and the techniques used for chatbot creation were things I had only a very basic understanding of before doing this project; however, the creation of Hamilton helped me begin to get familiar with these concepts. This was also the first project I did in Python, and the using of OOP concepts and learning syntax were very beneficial. 
 
 I don’t think I’m quite done with Hamilton; there is one more thing things I want to do to push the project a bit further, which is the implementation of user suggestions.
 
