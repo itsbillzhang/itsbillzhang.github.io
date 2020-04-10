@@ -93,7 +93,7 @@ Regular Expressions, also known as regex, is a special sequence of characters th
 
 `postal_code = re.findall(r'[a-z]\d[a-z]', postal_code_reply)[0]`
 
-Particularly, this regex looks for the first occurrence of a lowercase letter, followed by a digit, then another lowercase letter, and saves that in a list.
+Particularly, this regex looks for the first occurrence of a lowercase letter, followed by a digit, then another lowercase letter.
 
 Regex is extremely useful in understanding user intent. We can have a dictionary of all possible intentions the user can have, along with regex that would trigger such intentions. Then, when the user responds, the response loops through all the regex and the one that matches the user’s response is the user’s intention. For Hamilton, this looks like this:
 
