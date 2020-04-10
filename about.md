@@ -2,9 +2,9 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
-Test!
-
+Hello world prose!
 Some information about you!
 
 ### More Information
