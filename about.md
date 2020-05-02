@@ -8,8 +8,8 @@ published: true
 
 ### More Information
 
-Hi, I'm Bill. I'm currently in 2B Math at Waterloo. Here on my page are writeups to projects I've worked on. All this is still a work in progress!
+Hi, I'm Bill Zhang. I'm currently in 2B Math at Waterloo. I love exploring new things, and currently interested in Machine Learning and working with data. Feel free to contact me with the links at the bottom of the page.
 
-### Contact me
+### Resume
 
-[bill.zhang@uwaterloo.ca](mailto:bill.zhang@uwaterloo.ca)
+<a href="itsbillzhang.github.io/pdfs/CS-135-1179-Midterm1_exam.pdf" target="_blank">TEST</a>
