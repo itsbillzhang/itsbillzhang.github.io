@@ -9,8 +9,9 @@ published: true
 
 Hello World!
 
-<p class="centered-text">
+<p class="centered-text">sdsads
 <img class="centered" src="{{site.url}}/images/tinder.png" />
 </p>
 as
 dassasasad
+asdsad
