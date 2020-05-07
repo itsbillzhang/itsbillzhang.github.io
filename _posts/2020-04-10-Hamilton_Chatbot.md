@@ -9,6 +9,8 @@ published: true
 </a>
 </div>
 
+Code found [here](https://github.com/itsbillzhang/Chatbots/blob/master/BubbleTea%20Chatbot).
+
 ## Rationale
 The Turing Test was developed by Alan Turning in 1950. At its essence, it connects a human, the intergator, with (1) a machine designed to mimic human responses on a text-based platform and (2) another human. After having separate conversations, If the evaluator cannot distinguish the machine apart from the human, the machine is to have passed the Turing Test. 
 
