@@ -12,6 +12,12 @@ Hello World!
 <p class="centered-text">sdsads
 <img class="centered" src="{{site.url}}/images/tinder.png" />
 </p>
+
+<p class="centered-text">
+<img class="centered" src="{{site.url}}/images/TuringTest.png" />
+</p>
+
+
 as
 dassasasad
 asdsad
