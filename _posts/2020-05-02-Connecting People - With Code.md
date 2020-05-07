@@ -44,7 +44,7 @@ Cleaning responses were quite trivial. Using excel’s find and replace, all ins
 
 Once imported into a cozy dataframe, I then had to clean up the hobbies part of user responses. The string responses were tokenized:
 
-`
+```
 
 def hobbies_to_list(df):
     #hobbies_index = df.columns.get_loc("Hobbies")
@@ -52,7 +52,7 @@ def hobbies_to_list(df):
         hobbies_as_string = df.at[i, "Hobbies"]
         hobbies_as_list = hobbies_as_string.split(', ')
         df.at[i, "Hobbies"] = hobbies_as_list
-`
+```
 
 and we were all set to get started!
 
