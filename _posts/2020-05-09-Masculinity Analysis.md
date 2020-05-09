@@ -72,7 +72,7 @@ As for my labels, I mapped “Straight” to 1, else 0.
 
 ## Dealing with Missing Data
 
-Another mistake occurred here. Through inspection, I concluded that missing data were labeled as ‘NaN’, something that is common for datasets. However, it was only running some algorithms, and after investigating why things did not add up did I realized that both ‘Nan” and the string “Not available” were used for missing data. The time I could have saved! This taught me to do a more thorough .value_counts() in the future and to make sure I understand my data before proceeding.
+Another mistake occurred here. Through inspection, I concluded that missing data were labeled as ‘NaN’, something that is common for datasets. However, it was only running some algorithms, and after investigating why things did not add up did I realized that both ‘NaN‘ and the string “Not available” were used for missing data. The time I could have saved! This taught me to do a more thorough .value_counts() in the future and to make sure I understand my data before proceeding.
 
 I also had to figure out what to do with the missing data. The first time I ran the model, not wanting to do any more reading, I opted for a quick-and-dirty dropna, which elements all rows where one of the column responses were missing. This led to 212 participants being dropped, an 18% dataset reduction. The detriment this had on my model’s accuracy compared to my second implementation was noticeable, however. 
 
@@ -80,10 +80,12 @@ I also had to figure out what to do with the missing data. The first time I ran 
 
 Instead of removing missing features, we can fill the spaces with missing features by taking an educated guess of what that value would have been. Although common approaches are finding the average of a column, using a K Nearest Neighbor Imputation seems to be a superior method. KNN-Imputation takes in a dataframe, finds the euclidian distances of each row (whose features are converted to a vector) with one another. Any missing feature is imputed by the mean of the n nearest neighbors in terms of that distance, where n is a parameter of our choosing. 
 
+```
 from sklearn.impute import KNNImputer
 
 imputer = KNNImputer(n_neighbors=2)
 useful_df_array = imputer.fit_transform(useful_df)
+```
 
 I chose n = 2 randomly. However, what can improve my model even further is running a loop testing n values from say [1,100], and then picking the n-value that resulted in the most accuracy. 
 
@@ -146,7 +148,7 @@ Unlike a y = mx+b linear model, a logistic model uses a Sigmoid function to prov
 
 Features in reference:
 ["q0007_0002", "q0007_0003", "q0007_0004", "q0007_0007", "q0007_0010", "q0007_0011",
-# "q0007_0005", "q0007_0006", "q0007_0008", "q0007_0009", 'q0001', 'q0002']
+ "q0007_0005", "q0007_0006", "q0007_0008", "q0007_0009", 'q0001', 'q0002']
 
 The interpretation of the graph is made tiring with my previous choice to map masculine traits to higher numbers, and non-masculine traits to lower numbers. The heaviest factor was associated with whether or not one had sexual relations with men. As a higher number represents more masculine (in that case), a higher coefficient for index 3 means that they DO NOT have sexual relationships when men (which makes sense, straight guys are less likely to mingle with men). This was much more of a factor than having relationships with women, with both straight and non-straight guys do. The only negative factor, crying, means that the more a man cried, the more chance of being straight he was. Once again, I wish that I had mapped all values by the same metric, but here we are.
 
@@ -210,9 +212,10 @@ However, does this mean that the groups are split by orientation? It turns out n
 
 This shows that masculinity is at least not the dominating feature in determining sexual orientation. What are the groups mostly divided on then, if not for orientation? Well, aside from one cluster being more masculine than the other, the most significant cluster differences occur at index 3 (0.316 vs 0.930) and index 9 (0.172 vs 0.757). A ¼ point difference also occurs in index 10 (0.490 vs 0.752). 
 
-Index 3 - How often do you cry?
-Index 9 - How often do you feel lonely or isolated?
-Index 10 - How often do you a physical fight with another person?
+- Index 3 - How often do you cry?
+- Index 9 - How often do you feel lonely or isolated?
+- Index 10 - How often do you a physical fight with another person?
+
 
 The less-masculine group, with a 0.316, cries much more than the 0.930 from the masculine group, the difference being an average participant response of ‘Sometimes’’ to the ‘Never’. The less masculine cluster also cries a lot more, with an average response of about ‘Often’ to ‘’Rarely, but open to it. Finally, the second masculine group is a bit more aggressive physically, with an average response of “Sometimes” vs “Rarely”. The fact that the columns (sexual relationships with men/women) that were most influential in determining orientation barely changes between the 2 clusters (about a 0.11 difference in each) shows that the non-masculine group is slightly more likely to get into sexual relations with other men and slightly less likely to get in relations with women.
 
