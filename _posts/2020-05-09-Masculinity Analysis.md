@@ -7,7 +7,8 @@ published: true
 </a>
 </div>
 > “The spirit that interferes with (the development of masculinity in boys) … negates consciousness. It’s antihuman, desirous of failure, jealous, resentful, and destructive. No one truly on the side of humanity would ally him or herself with such a thing. No one aiming at moving up would allow him or herself to become possessed by such a thing. And if you think tough men are dangerous, wait until you see what weak men are capable of.” 
-- Jordan Peterson
+
+Jordan Peterson
 
 Code can be found [here.](https://github.com/itsbillzhang/ML-Side-Projects/blob/master/Personal%20Masc%20Analysis.ipynb)
 
@@ -38,19 +39,20 @@ For brevity, ‘masculine’ will be shorthanded to M, and non-masculine will be
 
 I was interested in the differences in men who approached life with different levels of masculinity. Many of the survey questions, such as “Have you seen of a sexual harassment incident at work.”, did not have a clear answer of what deemed as M or NM. The feature columns ultimately decided to use in my analysis were the answers to the following:
 
-In general, how masculine or “manly” do you feel?
-How important is it to you that others see you as masculine?
-How often do you ask a friend for personal advice? *
-How often do you express physical affection to male friends, like hugging, rubbing shoulders? *
-How often do you cry? *
-How often do you have sexual relations with women?
-How often do you have sexual relations with men? *
-How often do you see a therapist? *
-How often do you feel lonely or isolated? *
-How often do you get in a physical fight?
-How often do you watch sports?
-How often do you work out?
-* represents NM qualities.
+- In general, how masculine or “manly” do you feel?
+- How important is it to you that others see you as masculine?
+- How often do you ask a friend for personal advice? *
+- How often do you express physical affection to male friends, like hugging, rubbing shoulders? *
+- How often do you cry? *
+- How often do you have sexual relations with women?
+- How often do you have sexual relations with men? *
+- How often do you see a therapist? *
+- How often do you feel lonely or isolated? *
+- How often do you get in a physical fight?
+- How often do you watch sports?
+- How often do you work out?
+
+'*' represents NM qualities.
 
 Looking through the survey, the label spoke out to me: What is your sexual orientation? That seemed interesting! Hence, my question became: Could we use masculinity as a predictor of sexual orientation? 
 
