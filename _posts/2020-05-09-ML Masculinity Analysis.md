@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 <div class="featured">
 <a href="{{ page.url }}">
@@ -217,4 +217,4 @@ The less-masculine group, with a 0.316, cries much more than the 0.930 from the 
 
 # Conclusion
 
-This was a very satisfying project to do, as I had known nothing about ML algorithms and how conclusions came to be beforehand! I also learned a lot about using sklearn and matplotlib libraries. It was also a lot of fun going through different datasets, and letting my mind wander curiously about what things I might be able to deduce! It’s something I will be doing more soon. I also learned a lot from my mistakes, so hopefully the next time I tackle data will be done more elegantly. 
+This was a very satisfying project to do, as I had known nothing about ML algorithms and how conclusions came to be beforehand! I also learned a lot about using sklearn and matplotlib libraries. It was also a lot of fun going through different datasets, and letting my mind wander curiously about what things I might be able to deduce! It’s something I will be doing more soon. I also learned a lot from my mistakes, so hopefully the next time I tackle data will be done more elegantly.
