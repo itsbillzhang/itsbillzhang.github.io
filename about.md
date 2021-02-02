@@ -12,8 +12,5 @@ Hi, I'm Bill Zhang. I'm currently in 3A Math at Waterloo. I love exploring new t
 
 ### Resume
 
-<a href="https://itsbillzhang.github.io/pdfs/CS-135-1179-Midterm1_exam.pdf" target="_blank" type="application/pdf">TEST111</a>
+<a href="https://github.com/itsbillzhang" target="_blank" type="application/pdf">Github Repos</a>
 
-https://itsbillzhang.github.io/pdfs/CS-135-1179-Midterm1_exam.pdf
-
-<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
