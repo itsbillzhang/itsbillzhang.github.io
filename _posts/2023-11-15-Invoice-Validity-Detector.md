@@ -4,7 +4,7 @@ published: true
 
 <div class="featured">
 <a href="{{ page.url }}">
-<img src="{{site.url}}/images/high_level_data_flow.png" />
+<img src="{{site.url}}/images/fakeinvoice-dp.png" />
 </a>
 </div>
 
