@@ -1,6 +1,16 @@
 ---
 published: false
 ---
+---
+published: true
+---
+<div class="featured">
+<a href="{{ page.url }}">
+<img src="{{site.url}}/images/high_level_data_flow.png" />
+</a>
+</div>
+
+
 test test
 
 ## A New Post
