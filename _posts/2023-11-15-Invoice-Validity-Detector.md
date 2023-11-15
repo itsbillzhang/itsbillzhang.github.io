@@ -101,7 +101,7 @@ To begin working with Databricks, one must first start a cluster. This acts as t
 
 The invoice flagging job on Databricks has 7 tasks in total. They were:
 
-1. Read the photo of the invoice from Azure blob.
+One: Read the photo of the invoice from Azure blob.
 
 This required mounting blob storage to Databricks. This essentially puts a link between our workspace and Azure, so that any files on Azure blob will have a local reference.
 
@@ -115,7 +115,7 @@ Here, I specify the location of my storage on the cloud, and allow the photos to
 <img class="centered" src="{{site.url}}/images/onetwo.png" />
 </p>
 
-2. Running Optical Character Recognition (OCR) on the image. 
+Two: Running Optical Character Recognition (OCR) on the image. 
 - First On Azure, I initiated Azure Computer Vision, and used the generated endpoint and key to enable its cognitive services API in Databricks. 
 - The output of whatever was in our blob storage would be passed onto OCR, which turns the image into a block of text which can be parsed.
 
@@ -127,7 +127,7 @@ Here, I specify the location of my storage on the cloud, and allow the photos to
 <img class="centered" src="{{site.url}}/images/twothree.png" />
 </p>
 
-3. Feature generation.
+Three: Feature generation.
 
 Now that we have the invoice in text format, we need to pinpoint the specific pieces of data we need, because this one piece of text won’t help us. I chose relatively simple features, but more advanced feature can be produced that would allow us to abstract even more from the invoices, such as number of items bought, total amount, and item description.
 
@@ -146,7 +146,7 @@ Which allowed the following features to be extracted from our example invoice:
 <img class="centered" src="{{site.url}}/images/threefourfive.png" />
 </p>
 
-4. Read the data of past invoices from Azure SQL.
+Four: Read the data of past invoices from Azure SQL.
 
 <p class="centered-text">
 <img class="centered" src="{{site.url}}/images/backend_companies_full.png" />
@@ -154,7 +154,7 @@ Which allowed the following features to be extracted from our example invoice:
 
 In a similar vein to how blob was mounted, we pass the credentials of our cloud SQL so that past vendor data can be viewed. In practice, this data would be updated every time a new invoice is uploaded.
     
-5. Flag for validity.
+Five: Flag for validity.
 
 A rule based flagging system based on pattern matching to past invoices is invoked here. If there is a match on name, but the destination of payment has changed, the system voices a concerned. While this is very simple, the infrastructure allows more complex flagging. For example, if a Machine Learning based flagging model were to be put in place, this pipeline easily allows that to happen. We can swap this job with a more complicated flagging system. 
     
@@ -167,11 +167,11 @@ A rule based flagging system based on pattern matching to past invoices is invok
 <img class="centered" src="{{site.url}}/images/fivesixseven.png" />
 </p>
 
-6. Alert sending.
+Six: Alert sending.
 
 If there is an invoice that is deemed invalid, then an email is automatically sent, alerting of an potentially improper invoice.
 
-7. Uploading of data.
+Seven: Uploading of data.
 
 A record of the validation attempt and its outcome is recorded and uploaded to our SQL database, allowing recordkeeping. 
 
@@ -184,7 +184,7 @@ To enable ThoughtSpot, a firewall entry needed to be approved in our Azure serve
 For example, here is the total values of approved invoices and unapproved invoices. 
 
 <p class="centered-text">
-<img class="centered" src="{{site.url}}/images/thoughtspot.png" />
+<img class="centered" src="{{site.url}}/images/thoughtspot2.png" />
 </p>
 
 ## Conclusions and Next Steps
