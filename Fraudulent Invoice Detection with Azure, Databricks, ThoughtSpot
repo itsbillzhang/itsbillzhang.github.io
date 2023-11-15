@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 <div class="featured">
 <a href="{{ page.url }}">
