@@ -194,7 +194,6 @@ As someone who had limited exposure to the above technologies, it was both a fru
 Looking at this project as a whole, there are a couple of things can make this better:
 
 - Validation goes beyond a single customer. What if the database of invoices we compare new invoices against is a generalized one rather than customer-specific? This would allow us to work with a much larger dataset.
+- Better features generated. As an example, we can have information not only on components of the invoice, but the individual items of the invoices and recognize their categories. This would allow us to also have more advanced rules on what is on the invoice. For e.g, if food is able to be identified on an invoice, than food say on an Expense Reimbursement Invoice can be flagged if the amount is too large, such as >$100 for what is supposed to be a single person meal expense.
 - If multiple people are using the software within a single company, each invoice upload could be linked to the particular person. This would combat against abnormal invoices from a single person.
-- Better features generated.For e.g, tagging the things bought on the invoices with categories. For e.g, if food is able to be identified on an invoice, than food say on an Expense Reimbursement Invoice can be flagged if the amount is too large, such as >$100 for what is supposed to be a single person meal expense.
 - Identification of different fraud causes that were not covered here. For e.g, duplication fraud. If two invoices that are identical are given a week apart, are they the same invoice that might be paid twice?
-
