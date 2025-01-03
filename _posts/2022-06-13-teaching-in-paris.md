@@ -13,7 +13,7 @@ One of the scariest things I've ever done was to move across the world for 8 mon
 
 
 <p class="centered-text">
-<img class="centered" src="{{site.url}}/images/1 - Powerpoint.png" />
+<img class="centered" src="{{site.url}}/images/1 - powerpoint.png" />
 </p>
 Preparing to introduce myself to different groups of students with a powerpoint about Life in Canada!
 
