@@ -5,38 +5,25 @@
 </a>
 </div>
 
-Code found [here](https://github.com/itsbillzhang/InvoiceValidity/blob/main/Entire%20Project.py).
+Class trip to London, kids tripping over the stairs of the Canterbury Cathedral. 
 
-## Motivation
+## Context
 
-While investigating the suite of features offered by procurement companies, I was intrigued by invoice processing, partly piqued by recalling a startling fraud case: a man who ingeniously deceived industry titans Google and Facebook out of $100 million with [counterfeit invoices](https://www.npr.org/2019/03/25/706715377/man-pleads-guilty-to-phishing-scheme-that-fleeced-facebook-google-of-100-million). This incident underscores a paradox; the larger the organization, the greater the susceptibility to coordination lapses and, consequently, the higher the risk of such oversights. It’s a compelling reminder of the vital need for robust and intelligent invoice verification mechanisms, even—or especially—for the most technologically advanced firms.
+One of the scariest things I've ever done was to move across the world for 8 months, immersing myself in a completely different language and culture, to teach in a public school for 8 months. There were days, especially at the beginning, where I wondered what I was doing, but over the 8 months, I made amazing memories I'll keep for the rest of my life. Here are moments from my classroom.
 
-So I tried to build my own while learning a new tech stack.
-
-## Table of Contents:
-
-1. Example Usage
-2. High Level Data Flow
-3. Deep Dive
-4. Conclusions and Next Steps
-
-## Example Usage
-
-Kaitlyn does HR for an international pet adoption agency called Claws to Paws. She just got hired because recently Claws to Paws has been expanding rapidly. She gets this invoice for a company they’ve worked for in the past: TechSolvers. It looks like this:
 
 <p class="centered-text">
-<img class="centered" src="{{site.url}}/images/Fake invoice.png" />
+<img class="centered" src="{{site.url}}/images/1 - Powerpoint.png" />
+  <figcaption> Preparing to introduce myself to different groups of students with a powerpoint about Life in Canada! </figcaption>.
 </p>
-
-Instead of manually recording this invoice with whatever software from the 2000s, she uses an automatically invoice processing software. She uploaded a picture of this invoice, and leaves for lunch.
-
-Behind the scenes, important information from the picture is automatically extracted using computer vision.
+Preparing!
 
 <p class="centered-text">
-<img class="centered" src="{{site.url}}/images/invoice_extracted_text.png" />
+<img class="centered" src="{{site.url}}/images/3 - homework.png" />
 </p>
 
-More so, this isn’t the first time Claws to Paws have dealt with TechSolvers. The software keeps a list of the information gathered on the vendors from the previously uploaded invoices and compares the new invoice to that list: 
+
+
 <p class="centered-text">
 <img class="centered" src="{{site.url}}/images/backend_companies.png" />
 </p>
