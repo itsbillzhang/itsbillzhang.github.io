@@ -9,7 +9,7 @@ Class trip to London, kids tripping over the stairs of the Canterbury Cathedral.
 
 ## Context
 
-One of the scariest things I've ever done was to move across the world for 8 months, immersing myself in a completely different language and culture, to teach in a public school for 8 months. There were days, especially at the beginning, where I wondered what I was doing, but over the 8 months, I made amazing memories I'll keep for the rest of my life. Here are moments from my classroom.
+One of the scariest things I've ever done was to move across the world for 8 months, immersing myself in a completely different language and culture, to teach in a public school for 8 months through a exchange program called TAPIF. There were days, especially at the beginning, where I wondered what I was doing, but over the 8 months, I made amazing memories I'll keep for the rest of my life. Here are moments from my classroom.
 
 
 <p class="centered-text">
