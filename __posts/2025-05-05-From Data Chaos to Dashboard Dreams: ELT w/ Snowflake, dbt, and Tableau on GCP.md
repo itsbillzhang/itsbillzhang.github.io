@@ -1,6 +1,6 @@
 <div class="featured">
 <a href="{{ page.url }}">
-<img src="{{site.url}}/images/Friends.jpg" />
+<img src="{{site.url}}/images/cover_etl.jpg" />
 </a>
 </div>
 
