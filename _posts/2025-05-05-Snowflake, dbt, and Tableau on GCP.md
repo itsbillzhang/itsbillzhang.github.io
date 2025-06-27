@@ -1,6 +1,6 @@
 <div class="featured">
 <a href="{{ page.url }}">
-<img src="itsbillzhang.github.io/images/cover_etl.jpg" />
+<img src="itsbillzhang.github.io/images/cover_etl.png" />
 </a>
 </div>
 
