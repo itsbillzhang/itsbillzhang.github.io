@@ -12,7 +12,7 @@ Every data enthusiast dreams of finding that perfect, messy dataset—a real-wor
 Looking at the tangled web of files, I imagined a CEO walking up to me and saying, "I need a single, clean table with our 2017 order information, and I want a dashboard that makes sense of our revenue. Make it happen." While there was no actual CEO, the challenge was too juicy to pass up. I wanted to build a modern data pipeline from scratch to tame this data beast and turn it into something beautiful and insightful. Challenge accepted.
 
 <p class="centered-text">
-<img class="centered" src="{{site.url}}/images/Linked_Schema.PNG" />
+<img class="centered" src="{{site.url}}/images/Linked_Schema.png" />
 </p>
 
 ## The Game Plan
@@ -25,7 +25,7 @@ My battle plan was to build an ELT (Extract, Load, Transform) pipeline. Unlike t
 4. **Visualize (The Grand Finale)**: With a perfect table ready, the final step was to connect it to Tableau and build a dashboard that told a compelling story about Olist's 2017 performance.
 
 <p class="centered-text">
-<img class="centered" src="{{site.url}}/images/ELT_Pipeline.jpg" />
+<img class="centered" src="{{site.url}}/images/ELT_Pipeline.png" />
 </p>
 
 ## Step 1: The Data Dump (Google Cloud Storage)
@@ -34,7 +34,7 @@ My battle plan was to build an ELT (Extract, Load, Transform) pipeline. Unlike t
 First things first, I needed a home for my eight unruly CSV files. I downloaded the dataset from Kaggle and immediately tossed it into a Google Cloud Storage (GCS) bucket. No cleaning, no peeking—just a straight-up data dump. Think of it as the digital equivalent of throwing everything in the garage to sort out later. Step one, achieving controlled chaos, was complete.
 
 <p class="centered-text">
-<img class="centered" src="{{site.url}}/images/GCP_Bucket.jpg" />
+<img class="centered" src="{{site.url}}/images/GCP_Bucket.png" />
 </p>
 
 
@@ -68,7 +68,7 @@ FROM @gcs_olist_stage
 After running these commands for all eight files, our workshop was officially open for business.
 
 <p class="centered-text">
-<img class="centered" src="{{site.url}}/images/Raw_Snowflake.jpg" />
+<img class="centered" src="{{site.url}}/images/Raw_Snowflake.png" />
 </p>
 
 
@@ -142,7 +142,7 @@ With all my dbt models defined, it was time to start the factory. A single comma
 dbt run
 
 <p class="centered-text">
-<img class="centered" src="{{site.url}}/images/dbt_run.jpg" />
+<img class="centered" src="{{site.url}}/images/dbt_run.png" />
 </p>
 
 Like magic, dbt connected to Snowflake, ran all my SQL models in the correct order, and materialized them as views and tables. My pipeline was alive! But was the data any good? Another simple command gave me the answer:
@@ -150,7 +150,7 @@ Like magic, dbt connected to Snowflake, ran all my SQL models in the correct ord
 dbt test
 
 <p class="centered-text">
-<img class="centered" src="{{site.url}}/images/dbt_compile.jpg" />
+<img class="centered" src="{{site.url}}/images/dbt_compile.png" />
 </p>
 
 
@@ -161,7 +161,7 @@ All 11 tests passed. My data was clean, validated, and ready for the spotlight.
 The heavy lifting was over. I fired up Tableau, connected it to my new order_customers_2017 table in Snowflake, and started dragging and dropping. My goal was a clean, intuitive dashboard that provided a snapshot of Olist's business in 2017.
 
 <p class="centered-text">
-<img class="centered" src="{{site.url}}/images/tableau.jpg" />
+<img class="centered" src="{{site.url}}/images/tableau.png" />
 </p>
 
 
