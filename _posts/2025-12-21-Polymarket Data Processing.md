@@ -1,8 +1,3 @@
-<div class="featured">
-<a href="{{ page.url }}">
-<img src="{{site.url}}/images/meme_st.jpg" />
-</a>
-</div>
 
 
 ## Motivation
