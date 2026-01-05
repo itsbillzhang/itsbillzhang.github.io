@@ -7,3 +7,8 @@
 
 ## Motivation
 Blog writeup in progress!
+
+
+<p class="centered-text">
+<img src="{{site.url}}/images/etl_flow.png" />
+</p>
