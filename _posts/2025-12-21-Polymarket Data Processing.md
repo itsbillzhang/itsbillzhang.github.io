@@ -1,6 +1,6 @@
 <div class="featured">
 <a href="{{ page.url }}">
-<img src="{{site.url}}/images/stocks.jpeg" />
+<img src="{{site.url}}/images/meme_st.jpg" />
 </a>
 </div>
 
@@ -13,4 +13,4 @@ Blog writeup in progress!
 <img src="{{site.url}}/images/etl_flow.png" />
 </p>
 
-![Screenshot 2026-01-05 at 11.41.06 AM.png]({{site.baseurl}}/_posts/Screenshot 2026-01-05 at 11.41.06 AM.png)
+
